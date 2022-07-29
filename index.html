@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:rgb(159, 215, 241);">
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center" style="background-image: url(https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/Bacteria%20banner.jpg?itok=OXWbtsga);">  >
+          <font color="white">  
+            <h1>Belly Button Biodiversity Dashboard</h1>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </font>
+        </div>
+      </div>    
+      <div class = "col-md-4"></div>
+      <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <h4>Test Subject ID No.:</h4>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        </div>
+      </div>
+      <div class = "col-md-4"></div>
+      <div class = "row">
+          <div class="col-md-4">    
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+          </div>
+      </div>
+    </div>
+      <div class="col-md-6">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-6">
+        <div id="gauge"></div>
+      </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>    
+    <br>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <p> <h4>The interactive charts help us visualize the different bacteria collected from the volunteers. Start the analysis by using the drop-down menu to select a volunteer's id.  By selecting this id, the bar chart will be updated and will show data from the top 10 bacteria cultures.  The gauge chart shows the washing frequency giving the number of scrubs per week.  The size of bubbles in the bubble chart shows the sample’s concentration and biodiversity of the bacteria.
+      </h4> </p>
+  </div>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="charts.js"></script>
+  </body>
+</body>
+
+</html>
