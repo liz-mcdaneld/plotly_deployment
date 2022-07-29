@@ -73,9 +73,9 @@ function init() {
       var metaresults = metaDataArray[0];
       // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
       var PANEL = d3.select("#sample-metadata");
-      var otu_ids = results.otu_ids;
-      var otu_labels = results.otu_labels;
-      var sample_values = results.sample_values;
+      var otu_ids = result.otu_ids;
+      var otu_labels = result.otu_labels.slice(0, 10).reverse();
+      var sample_values = result.sample_values.slice(0, 10).reverse();
       // Deliverable 3 Gauge Chart
       // 3. Create a variable that holds the washing frequency.
       var washing_frequency = metaresults.wfreq;
@@ -85,11 +85,11 @@ function init() {
       var yticks = otu_ids.map(sampleObj => "OTU " + sampleObj).slice(0,10).reverse();
       // 8. Create the trace for the bar chart. 
       var barData = [{
-        x: sample_values.slice(0, 10).reverse(),
+        x: sample_values,
         y: yticks,
         type: "bar",
         orientation: "h",
-        text: otu_labels.slice(0, 10).reverse()
+        text: otu_labels
       }];
       // 9. Create the layout for the bar chart. 
       var barLayout = {
