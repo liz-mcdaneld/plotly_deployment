@@ -85,18 +85,15 @@ function init() {
       var yticks = otu_ids.map(sampleObj => "OTU " + sampleObj).slice(0,10).reverse();
       // 8. Create the trace for the bar chart. 
       var barData = [{
-        y: yticks,
         x: sample_values.slice(0, 10).reverse(),
-        text: otu_labels.slice(0, 10).reverse(),
+        y: yticks,
         type: "bar",
         orientation: "h",
+        text: otu_labels.slice(0, 10).reverse()
       }];
       // 9. Create the layout for the bar chart. 
       var barLayout = {
-        width: 500,
-        height: 500,
-        title: "Top 10 Bacteria Ciltures",
-        margin: {t: 25, l: 150}
+        title: "Top 10 Bacteria Cultures",
       };
       // 10. Use Plotly to plot the data with the layout. 
       Plotly.newPlot("bar", barData, barLayout);
