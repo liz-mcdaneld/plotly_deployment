@@ -120,7 +120,7 @@ function init() {
             margin: {t: 0},
             hovermode: "closest",
             xaxis: {title: "OTU Id"},
-            margin: {t: 30}
+            automargin: true,
       };
       // 3. Use Plotly to plot the data with the layout.
       Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
