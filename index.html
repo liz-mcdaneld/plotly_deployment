@@ -22,64 +22,58 @@
           </div>
         </div>
       </div>    
-      <div class = "col-md-4"></div>
+
       <div class="row">
-      <div class="col-md-4">
-        <div class="well">
-          <h4>Test Subject ID No.:</h4>
-          <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
-        </div>
-        </div>
-      </div>
-      <div class = "col-md-4"></div>
-      <div class = "row">
-          <div class="col-md-4">    
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+          <div class="col-md-6">
+            <div class="well">
+              <h4>Test Subject ID No.:</h4>
+              <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">Demographic Info</h3>
+              </div>
+              <div id="sample-metadata" class="panel-body"></div>
+            </div>
           </div>
-          <div id="sample-metadata" class="panel-body"></div>
+
+          <div class= "col-md-6 text-center">
+            <font color="white">
+              <p><h3>The interactive charts help to visualize the different bacteria collected from the volunteers. 
+                To start the analysis, use the drop-down menu to select a volunteer's ID number. 
+                After selecting an ID number, the bar chart will automatically update and show data from the 'Top 10 Bacteria Cultures'.
+                The bacterias are found by their Operational Taxonomic Unit (OTU).  
+                The gauge chart shows the washing frequency of a volunteer’s belly button giving the number of scrubs per week.  
+                The size of bubbles in the bubble chart shows the bacteria sample’s concentration and biodiversity of the bacteria. 
+                Hovering the cursor over the bars in the bar chart and the bubbles in the bubble chart will showcase the bacteria’s information.</h3></p>
+            </font>
           </div>
       </div>
-    </div>
-      <div class="col-md-6">
-        <div id="bar"></div>
+
+      <br>
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div id="bar"></div>
+        </div>
+        
+        <div class="col-md-6">
+          <div id="gauge"></div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <div id="gauge"></div>
-      </div>
-    
-    <div class="row">
-      <div class="col-md-12">
-      </div>
-    </div>    
+
     <br>
 
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-md-12">
         <div id="bubble"></div>
       </div>
     </div>
-  <br>
-  <div class="row">
-    <div class="col-md-12">
-      <font color="white">
-        <p> <h4>The interactive charts help to visualize the different bacteria collected from the volunteers. 
-          To start the analysis, use the drop-down menu to select a volunteer's ID number.  
-          After selecting an ID number, the bar chart will automatically update and show data from the top 10 bacteria cultures.  
-          The gauge chart shows the washing frequency of a volunteer’s belly button giving the number of scrubs per week.  
-          The size of bubbles in the bubble chart shows the bacteria sample’s concentration and biodiversity of the bacteria. 
-          Hovering the cursor over the bars in the bar chart and the bubbles in the bubble chart will showcase the bacteria’s information.
-        </h4> </p>
-      </font>
   </div>
-  </div>
-</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="charts.js"></script>
+    <script src="Static/JavaScript/charts.js"></script>
   </body>
 </body>
 
