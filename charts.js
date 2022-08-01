@@ -112,7 +112,7 @@ function init() {
         mode: "markers",
         marker: {size: sample_values,
                  color: otu_ids,
-                colorscale: "twilight"}
+                colorscale: "darkmint"}
        }];
       // 2. Create the layout for the bubble chart.
         var bubbleLayout = {
