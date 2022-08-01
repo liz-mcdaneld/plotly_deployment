@@ -112,7 +112,7 @@ function init() {
         mode: "markers",
         marker: {size: sample_values,
                  color: otu_ids,
-                colorscale: "darkmint"}
+                 colorscale: "YlGnBu"}
        }];
       // 2. Create the layout for the bubble chart.
         var bubbleLayout = {
@@ -137,11 +137,11 @@ function init() {
             axis: { range: [null, 10], tickwidth: 2, tickcolor: "black"},
             bar: {color: "black"},
             steps: [
-                { range: [0, 2], color: "firebrick" },
+                { range: [0, 2], color: "darkred" },
                 { range: [2, 4], color: "darkorange" },
                 { range: [4, 6], color: "greenyellow" },
-                { range: [6, 8], color: "lightseagreen" },
-                { range: [8, 10], color: "dodgerblue" }
+                { range: [6, 8], color: "turquoise" },
+                { range: [8, 10], color: "royalblue" }
             ],
             threshold: { value: washing_frequency}
             },
